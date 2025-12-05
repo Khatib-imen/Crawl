@@ -6,9 +6,7 @@ def scrape_page(url):
     """Récupère le HTML et toutes les images d'une page"""
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
-    
-    # Extraire les images
-    images = [{"src": img.get("src"), "alt": img.get("alt")} for img in soup.find_all("img")]
+        images = [{"src": img.get("src"), "alt": img.get("alt")} for img in soup.find_all("img")]
     
     return soup, images
 
@@ -40,14 +38,12 @@ if __name__ == "__main__":
         {"type": "remove_text", "selector": "h1.headline"}
     ]
 
-    # Étape 1 : Scraper la page
     soup, images = scrape_page(url)
     print("Images trouvées :", images)
 
-    # Étape 2 : Nettoyer / modifier le HTML selon le prompt JSON
     soup_cleaned = clean_html(soup, prompt_actions)
 
-    # Sauvegarder le HTML nettoyé
     with open("html_cleaned.html", "w", encoding="utf-8") as f:
         f.write(str(soup_cleaned))
     print("HTML nettoyé sauvegardé dans 'html_cleaned.html'")
+
