@@ -93,8 +93,6 @@
 
 ---
 
-# 🤖 Smart Web Automation Agent
-
 ## 🛠️ Installation & Exécution
 📥 1. Cloner le projet
 ```bash
@@ -152,6 +150,7 @@ Les contributions sont les bienvenues :
 ✔️ Optimisation Front/Back
 ✔️ Support Firefox & Edge
 
+---
 
 
 
