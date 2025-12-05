@@ -27,7 +27,7 @@ async def navigate_and_modify(url: str, actions: list):
                 if selector:
                     await page.click(selector)
         
-        # Garde la page ouverte pour observer
         print("Actions exécutées ! La page reste ouverte.")
         await asyncio.sleep(30)
         await browser.close()
+
