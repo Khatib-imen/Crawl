@@ -1,8 +1,12 @@
 from openai import OpenAI
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 client = OpenAI(
-    base_url="***",
-    api_key="***"
+    base_url=os.getenv("OPENAI_BASE_URL"),
+    api_key=os.getenv("OPENAI_API_KEY")
 )
 
 def query_deepseek(prompt: str) -> str:
@@ -25,5 +29,3 @@ def query_deepseek(prompt: str) -> str:
         if chunk.choices[0].delta.content is not None:
             response_text += chunk.choices[0].delta.content
     return response_text
-
-
