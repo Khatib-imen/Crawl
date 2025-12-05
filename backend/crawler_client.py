@@ -1,4 +1,3 @@
-# backend/crawler_client.py
 import asyncio
 from crawl4ai import AsyncWebCrawler
 import json
@@ -11,7 +10,6 @@ async def crawl_website_async(url: str):
                 export_format="dict", 
                 render_js=True         
             )
-            # Convertir en dict pur
             if hasattr(result, "dict"):
                 return result.dict()
             elif hasattr(result, "to_dict"):
@@ -24,4 +22,5 @@ async def crawl_website_async(url: str):
 def crawl_website(url: str):
     """Fonction synchrone pour Flask"""
     return asyncio.run(crawl_website_async(url))
+
 
