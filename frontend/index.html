@@ -6,7 +6,6 @@
     <title>AI Web Cleaner – Live Demo</title>
 
     <style>
-        /* --- GLOBAL --- */
         body {
             font-family: "Segoe UI", Roboto, Arial, sans-serif;
             background: linear-gradient(135deg, #e9efff, #f7f9ff);
@@ -14,7 +13,6 @@
             padding: 40px;
         }
 
-        /* --- CONTAINER --- */
         .scraper-container {
             max-width: 1100px;
             margin: auto;
@@ -37,7 +35,6 @@
             }
         }
 
-        /* --- TITLE --- */
         h1 {
             text-align: center;
             color: #2b3a67;
@@ -167,7 +164,6 @@
 
     </div>
 
-    <!-- ======= JAVASCRIPT (votre même logique, inchangée) ======= -->
     <script>
         /* Votre JS reste le même — aucun changement fonctionnel */
         const scrapeBtn = document.getElementById("scrape-btn");
@@ -212,7 +208,6 @@
             }
         });
 
-        /* Action intelligence = inchangée */
         actionBtn.addEventListener("click", () => {
             if (!currentHtml) return alert("Aucune page scrappée.");
 
@@ -272,5 +267,6 @@
         });
     </script>
 </body>
+
 
 </html>
